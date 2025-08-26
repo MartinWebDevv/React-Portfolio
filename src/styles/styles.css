@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* **************OverAll Styles ******************* */
+
+/* smooth anchor scrolling + keep sections visible when nav appears */
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 72px;
+} /* match nav height */
+
+
+
+/* ********************Nav Bar Section ************** */
+
+/* Smooth fade in/out + slight slide. When hidden, don't block clicks. */
+.nav-transition {
+  transition: opacity 0.6s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    #0d1117,
+    #1f2937
+  ); /* matches your header */
+}
+
+.nav-transition.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+/* ********************Header Section ************** */
+/* Header hero background gradient */
+.header-hero {
+  background: linear-gradient(135deg, #0d1117, #1f2937);
+}
+
+/* Optional: make text pop */
+.header-hero h1 {
+  letter-spacing: 1px;
+}
+
+.header-hero p {
+  color: #cbd5e1; /* lighter gray-blue */
+}
+
+/* ********************About Section ************** */
+#about {
+  scroll-margin-top: 80px; /* if you add a fixed header later */
+}
+
+.about-photo {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+#about h2 {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+#about .lead {
+  line-height: 1.7;
+}
+
+/* Optional: tighten spacing on very small screens */
+@media (max-width: 576px) {
+  #about {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+/* ********************Footer Section ************** */
+.foot-color{
+  background: linear-gradient(135deg, #0d1117, #1f2937);
+}
